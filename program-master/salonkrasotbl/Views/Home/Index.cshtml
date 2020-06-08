@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layuout,cshtml";
+}
+
+<div>
+    <h3>Услуги</h3>
+    <table>
+        <tr class="header">
+            <td><p>Название услуги</p></td>
+            <td><p>Стоимость</p></td>
+            <td><p>Сотрудник</p></td>
+            <td></td>
+        </tr>
+        @foreach (salonkrasotbl.Models.Services b in Model)
+        {
+            <tr>
+                <td><p>@b.nomer</p></td>
+                <td><p>@b.nazvanije</p></td>
+                <td><p>@b.stoimist</p></td>
+                <td><p>@b.sotrudnik</p></td>
+            </tr>
+        }
+    </table>
+</div>
